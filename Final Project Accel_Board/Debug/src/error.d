@@ -1,0 +1,16 @@
+src/error.o: ../src/error.c \
+ E:/Final\ Project/Final\ Project\ Accel_Board/inc/jansson_private.h \
+ E:/Final\ Project/Final\ Project\ Accel_Board/inc/jansson.h \
+ E:/Final\ Project/Final\ Project\ Accel_Board/inc/jansson_config.h \
+ E:/Final\ Project/Final\ Project\ Accel_Board/inc/hashtable.h \
+ E:/Final\ Project/Final\ Project\ Accel_Board/inc/strbuffer.h
+
+E:/Final\ Project/Final\ Project\ Accel_Board/inc/jansson_private.h:
+
+E:/Final\ Project/Final\ Project\ Accel_Board/inc/jansson.h:
+
+E:/Final\ Project/Final\ Project\ Accel_Board/inc/jansson_config.h:
+
+E:/Final\ Project/Final\ Project\ Accel_Board/inc/hashtable.h:
+
+E:/Final\ Project/Final\ Project\ Accel_Board/inc/strbuffer.h:

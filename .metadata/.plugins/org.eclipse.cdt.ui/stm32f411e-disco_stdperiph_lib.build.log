@@ -1,0 +1,6 @@
+18:13:52 **** Incremental Build of configuration Debug for project stm32f411e-disco_stdperiph_lib ****
+make all 
+make: Nothing to be done for `all'.
+
+18:13:54 Build Finished (took 1s.633ms)
+

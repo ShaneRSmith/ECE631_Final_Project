@@ -1,0 +1,168 @@
+18:13:54 **** Incremental Build of configuration Debug for project Final Project Accel_Board ****
+make all 
+'Building file: ../src/state_machine.c'
+'Invoking: MCU GCC Compiler'
+E:\Final Project\Final Project Accel_Board\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DSTM32F411VETx -DSTM32F4 -DSTM32 -DSTM32F411E_DISCO -DDEBUG -DUSE_STDPERIPH_DRIVER -DSTM32F411xE -DHAVE_STD_INT.H -I"E:/Final Project/stm32f411e-disco_stdperiph_lib" -I"E:/Final Project/Final Project Accel_Board/inc" -I"E:/Final Project/stm32f411e-disco_stdperiph_lib/CMSIS/core" -I"E:/Final Project/stm32f411e-disco_stdperiph_lib/CMSIS/device" -I"E:/Final Project/stm32f411e-disco_stdperiph_lib/StdPeriph_Driver/inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/state_machine.d" -MT"src/state_machine.o" -o "src/state_machine.o" "../src/state_machine.c"
+<command-line>:0:13: warning: ISO C99 requires whitespace after the macro name
+../src/state_machine.c: In function 'state_machine':
+../src/state_machine.c:27:16: warning: passing argument 1 of 'haveStr' from incompatible pointer type [-Wincompatible-pointer-types]
+    if (haveStr(&receive_buff)==1)
+                ^
+In file included from E:/Final Project/Final Project Accel_Board/inc/state_machine.h:19:0,
+                 from ../src/state_machine.c:12:
+E:/Final Project/Final Project Accel_Board/inc/circ_buff.h:24:9: note: expected 'commBuffer_t * {aka struct _commBuffer_t *}' but argument is of type 'commBuffer_t ** {aka struct _commBuffer_t **}'
+ uint8_t haveStr(commBuffer_t*);
+         ^
+../src/state_machine.c:30:14: warning: passing argument 1 of 'getRxStr' from incompatible pointer type [-Wincompatible-pointer-types]
+     getRxStr(&receive_buff,temp);
+              ^
+In file included from E:/Final Project/Final Project Accel_Board/inc/state_machine.h:19:0,
+                 from ../src/state_machine.c:12:
+E:/Final Project/Final Project Accel_Board/inc/circ_buff.h:36:6: note: expected 'commBuffer_t * {aka struct _commBuffer_t *}' but argument is of type 'commBuffer_t ** {aka struct _commBuffer_t **}'
+ void getRxStr(commBuffer_t*, char*);
+      ^
+../src/state_machine.c:42:16: warning: passing argument 1 of 'haveStr' from incompatible pointer type [-Wincompatible-pointer-types]
+    if (haveStr(&receive_buff)==1)
+                ^
+In file included from E:/Final Project/Final Project Accel_Board/inc/state_machine.h:19:0,
+                 from ../src/state_machine.c:12:
+E:/Final Project/Final Project Accel_Board/inc/circ_buff.h:24:9: note: expected 'commBuffer_t * {aka struct _commBuffer_t *}' but argument is of type 'commBuffer_t ** {aka struct _commBuffer_t **}'
+ uint8_t haveStr(commBuffer_t*);
+         ^
+../src/state_machine.c:45:14: warning: passing argument 1 of 'getRxStr' from incompatible pointer type [-Wincompatible-pointer-types]
+     getRxStr(&receive_buff,temp);
+              ^
+In file included from E:/Final Project/Final Project Accel_Board/inc/state_machine.h:19:0,
+                 from ../src/state_machine.c:12:
+E:/Final Project/Final Project Accel_Board/inc/circ_buff.h:36:6: note: expected 'commBuffer_t * {aka struct _commBuffer_t *}' but argument is of type 'commBuffer_t ** {aka struct _commBuffer_t **}'
+ void getRxStr(commBuffer_t*, char*);
+      ^
+../src/state_machine.c:59:13: warning: passing argument 1 of 'putTxStr' from incompatible pointer type [-Wincompatible-pointer-types]
+    putTxStr(&send_buff, temp, strlen(temp));
+             ^
+In file included from E:/Final Project/Final Project Accel_Board/inc/state_machine.h:19:0,
+                 from ../src/state_machine.c:12:
+E:/Final Project/Final Project Accel_Board/inc/circ_buff.h:33:6: note: expected 'commBuffer_t * {aka struct _commBuffer_t *}' but argument is of type 'commBuffer_t ** {aka struct _commBuffer_t **}'
+ void putTxStr(commBuffer_t*, char*, uint8_t);
+      ^
+../src/state_machine.c:67:16: warning: passing argument 1 of 'haveStr' from incompatible pointer type [-Wincompatible-pointer-types]
+    if (haveStr(&receive_buff)==1)
+                ^
+In file included from E:/Final Project/Final Project Accel_Board/inc/state_machine.h:19:0,
+                 from ../src/state_machine.c:12:
+E:/Final Project/Final Project Accel_Board/inc/circ_buff.h:24:9: note: expected 'commBuffer_t * {aka struct _commBuffer_t *}' but argument is of type 'commBuffer_t ** {aka struct _commBuffer_t **}'
+ uint8_t haveStr(commBuffer_t*);
+         ^
+../src/state_machine.c:70:14: warning: passing argument 1 of 'getRxStr' from incompatible pointer type [-Wincompatible-pointer-types]
+     getRxStr(&receive_buff,temp);
+              ^
+In file included from E:/Final Project/Final Project Accel_Board/inc/state_machine.h:19:0,
+                 from ../src/state_machine.c:12:
+E:/Final Project/Final Project Accel_Board/inc/circ_buff.h:36:6: note: expected 'commBuffer_t * {aka struct _commBuffer_t *}' but argument is of type 'commBuffer_t ** {aka struct _commBuffer_t **}'
+ void getRxStr(commBuffer_t*, char*);
+      ^
+../src/state_machine.c:97:13: warning: passing argument 1 of 'putTxStr' from incompatible pointer type [-Wincompatible-pointer-types]
+    putTxStr(&send_buff, temp, strlen(temp));
+             ^
+In file included from E:/Final Project/Final Project Accel_Board/inc/state_machine.h:19:0,
+                 from ../src/state_machine.c:12:
+E:/Final Project/Final Project Accel_Board/inc/circ_buff.h:33:6: note: expected 'commBuffer_t * {aka struct _commBuffer_t *}' but argument is of type 'commBuffer_t ** {aka struct _commBuffer_t **}'
+ void putTxStr(commBuffer_t*, char*, uint8_t);
+      ^
+../src/state_machine.c:105:16: warning: passing argument 1 of 'haveStr' from incompatible pointer type [-Wincompatible-pointer-types]
+    if (haveStr(&receive_buff)==1)
+                ^
+In file included from E:/Final Project/Final Project Accel_Board/inc/state_machine.h:19:0,
+                 from ../src/state_machine.c:12:
+E:/Final Project/Final Project Accel_Board/inc/circ_buff.h:24:9: note: expected 'commBuffer_t * {aka struct _commBuffer_t *}' but argument is of type 'commBuffer_t ** {aka struct _commBuffer_t **}'
+ uint8_t haveStr(commBuffer_t*);
+         ^
+../src/state_machine.c:108:14: warning: passing argument 1 of 'getRxStr' from incompatible pointer type [-Wincompatible-pointer-types]
+     getRxStr(&receive_buff,temp);
+              ^
+In file included from E:/Final Project/Final Project Accel_Board/inc/state_machine.h:19:0,
+                 from ../src/state_machine.c:12:
+E:/Final Project/Final Project Accel_Board/inc/circ_buff.h:36:6: note: expected 'commBuffer_t * {aka struct _commBuffer_t *}' but argument is of type 'commBuffer_t ** {aka struct _commBuffer_t **}'
+ void getRxStr(commBuffer_t*, char*);
+      ^
+../src/state_machine.c:135:13: warning: passing argument 1 of 'putTxStr' from incompatible pointer type [-Wincompatible-pointer-types]
+    putTxStr(&send_buff, temp, strlen(temp));
+             ^
+In file included from E:/Final Project/Final Project Accel_Board/inc/state_machine.h:19:0,
+                 from ../src/state_machine.c:12:
+E:/Final Project/Final Project Accel_Board/inc/circ_buff.h:33:6: note: expected 'commBuffer_t * {aka struct _commBuffer_t *}' but argument is of type 'commBuffer_t ** {aka struct _commBuffer_t **}'
+ void putTxStr(commBuffer_t*, char*, uint8_t);
+      ^
+../src/state_machine.c:143:16: warning: passing argument 1 of 'haveStr' from incompatible pointer type [-Wincompatible-pointer-types]
+    if (haveStr(&receive_buff)==1)
+                ^
+In file included from E:/Final Project/Final Project Accel_Board/inc/state_machine.h:19:0,
+                 from ../src/state_machine.c:12:
+E:/Final Project/Final Project Accel_Board/inc/circ_buff.h:24:9: note: expected 'commBuffer_t * {aka struct _commBuffer_t *}' but argument is of type 'commBuffer_t ** {aka struct _commBuffer_t **}'
+ uint8_t haveStr(commBuffer_t*);
+         ^
+../src/state_machine.c:146:14: warning: passing argument 1 of 'getRxStr' from incompatible pointer type [-Wincompatible-pointer-types]
+     getRxStr(&receive_buff,temp);
+              ^
+In file included from E:/Final Project/Final Project Accel_Board/inc/state_machine.h:19:0,
+                 from ../src/state_machine.c:12:
+E:/Final Project/Final Project Accel_Board/inc/circ_buff.h:36:6: note: expected 'commBuffer_t * {aka struct _commBuffer_t *}' but argument is of type 'commBuffer_t ** {aka struct _commBuffer_t **}'
+ void getRxStr(commBuffer_t*, char*);
+      ^
+../src/state_machine.c:174:16: warning: passing argument 1 of 'haveStr' from incompatible pointer type [-Wincompatible-pointer-types]
+    if (haveStr(&receive_buff)==1)
+                ^
+In file included from E:/Final Project/Final Project Accel_Board/inc/state_machine.h:19:0,
+                 from ../src/state_machine.c:12:
+E:/Final Project/Final Project Accel_Board/inc/circ_buff.h:24:9: note: expected 'commBuffer_t * {aka struct _commBuffer_t *}' but argument is of type 'commBuffer_t ** {aka struct _commBuffer_t **}'
+ uint8_t haveStr(commBuffer_t*);
+         ^
+../src/state_machine.c:177:14: warning: passing argument 1 of 'getRxStr' from incompatible pointer type [-Wincompatible-pointer-types]
+     getRxStr(&receive_buff,temp);
+              ^
+In file included from E:/Final Project/Final Project Accel_Board/inc/state_machine.h:19:0,
+                 from ../src/state_machine.c:12:
+E:/Final Project/Final Project Accel_Board/inc/circ_buff.h:36:6: note: expected 'commBuffer_t * {aka struct _commBuffer_t *}' but argument is of type 'commBuffer_t ** {aka struct _commBuffer_t **}'
+ void getRxStr(commBuffer_t*, char*);
+      ^
+../src/state_machine.c:197:16: warning: passing argument 1 of 'haveStr' from incompatible pointer type [-Wincompatible-pointer-types]
+    if (haveStr(&receive_buff)==1)
+                ^
+In file included from E:/Final Project/Final Project Accel_Board/inc/state_machine.h:19:0,
+                 from ../src/state_machine.c:12:
+E:/Final Project/Final Project Accel_Board/inc/circ_buff.h:24:9: note: expected 'commBuffer_t * {aka struct _commBuffer_t *}' but argument is of type 'commBuffer_t ** {aka struct _commBuffer_t **}'
+ uint8_t haveStr(commBuffer_t*);
+         ^
+../src/state_machine.c:200:14: warning: passing argument 1 of 'getRxStr' from incompatible pointer type [-Wincompatible-pointer-types]
+     getRxStr(&receive_buff,temp);
+              ^
+In file included from E:/Final Project/Final Project Accel_Board/inc/state_machine.h:19:0,
+                 from ../src/state_machine.c:12:
+E:/Final Project/Final Project Accel_Board/inc/circ_buff.h:36:6: note: expected 'commBuffer_t * {aka struct _commBuffer_t *}' but argument is of type 'commBuffer_t ** {aka struct _commBuffer_t **}'
+ void getRxStr(commBuffer_t*, char*);
+      ^
+../src/state_machine.c:18:17: warning: unused variable 'go_for_launch' [-Wunused-variable]
+  static uint8_t go_for_launch = 0; // Flag to show if Multi_Board is ready for commands.
+                 ^
+../src/state_machine.c:172:8: warning: 'msg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    temp=publish(msg,topic); // This takes the message and wraps it up in a JSON object
+        ^
+../src/state_machine.c:172:8: warning: 'topic' may be used uninitialized in this function [-Wmaybe-uninitialized]
+'Finished building: ../src/state_machine.c'
+' '
+'Building target: Final Project Accel_Board.elf'
+'Invoking: MCU GCC Linker'
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"E:\Final Project\stm32f411e-disco_stdperiph_lib\Debug" -T"E:\Final Project\Final Project Accel_Board\LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -lm -o "Final Project Accel_Board.elf" @"objects.list"  -lstm32f411e-disco_stdperiph_lib
+'Finished building target: Final Project Accel_Board.elf'
+' '
+make --no-print-directory post-build
+'Generating binary and Printing size information:'
+arm-none-eabi-objcopy -O binary "Final Project Accel_Board.elf" "Final Project Accel_Board.bin"
+arm-none-eabi-size "Final Project Accel_Board.elf"
+   text	   data	    bss	    dec	    hex	filename
+  63620	   2292	   5280	  71192	  11618	Final Project Accel_Board.elf
+' '
+
+18:14:01 Build Finished (took 7s.280ms)
+

@@ -1,0 +1,59 @@
+/**
+  ******************************************************************************
+  * @file    main.c
+  * @author  ShaneRSmith
+  * @version V1.0
+  * @date    01-May-2016
+  * @brief   Main Function for ECE631 Final Project for Accel_Board
+  ******************************************************************************
+*/
+
+// Include Required Header Files
+#include <cstdint>
+#include <string.h>
+#include "stm32f4xx.h"
+#include "USART.h"
+#include "jansson.h"
+#include "json_coms.h"
+#include <sys/time.h>
+#include "circ_buff.h"
+
+// Global variables
+static uint32_t ticks = 0;
+static uint32_t lastTicks = 0;
+static uint8_t button_flag = 0;
+uint8_t str_start_flag=0;
+char* msg;		// Message to Publish
+char* topic;	// Topic to Publish
+
+// UART6
+#define MAX_STRLEN 2048
+volatile int haveString;	// volatile tells the compiler this value can change very quickly
+
+// Circular Buffers
+commBuffer_t receive_buff;
+commBuffer_t send_buff;
+
+int main(void)
+{
+	haveString = 0;	// Initialize haveString to false
+	InitUSART6();	// Initialize USART
+	
+	// Setup SysTick
+	ticks = 0;
+	lastTicks = 0;
+	SystemCoreClockUpdate();
+
+	InitBuffer(&receive_buff);	// Initialize receive buffer to '+'
+	InitBuffer(&send_buff);		// Initialize send buffer to '+'
+	// STM_EVAL_PBInit(BUTTON_USER, BUTTON_MODE_GPIO);	// Initialize Push Button
+
+	// Configure so 1 tick = 1ms or 1000tick = 1 second
+	if (SysTick_Config(SystemCoreClock / 1000))
+		while (1);
+	
+	while(1)
+	{
+		state_machine();
+	}
+}
